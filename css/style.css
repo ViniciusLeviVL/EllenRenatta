@@ -1,0 +1,56 @@
+@font-face {
+    font-family: Cute;
+    src: url("../fonts/Liebe\ finden\ -\ OTF.otf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --rosa-claro:#FFC8DD;
+    --lilás:#CDB4DB;
+    --rosa:#FFAFCC;
+    --azul-claro:#BDE0FE;
+    --azul:#A2D2FF;
+    --Cute: "Cute", Arial, Helvetica, sans-serif;
+}
+.photo-phrase {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow:#865969b6 0 2px 30px;
+    padding: 35px 0 35px 0;
+}
+.photo-phrase:nth-child(odd) {
+    background-color: var(--rosa-claro);
+}
+.photo-phrase:nth-child(even) {
+    background-color: #bde0fe54;
+}
+.photo {
+    width: 180px;
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: black solid 2px;
+}
+.photo-phrase > p {
+    text-align: center;
+    font-family: var(--Cute);
+    width: 75%;
+    margin-top: 20px;
+}
+.photo-phrase:nth-child(1) > .photo {
+    background-image: url("../images/auêis/main.jpg");
+}
+.photo-phrase:nth-child(2) > .photo {
+    background-image: url("../images/auêis/vovo.jpeg");
+    background-position: center 60%;
+}
+.photo-phrase:nth-child(3) > .photo {
+    background-image: url("../images/auêis/thumb.jpg");
+    background-position: center 15%;
+}
