@@ -5,16 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/calendar.css">
+    
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html"><img src="/images/ico/home.png" alt=""></a></li>
-            <li><a href="calendar.html"><img src="images/ico/003-calendar.png" alt="icone de calendario"></li></a>
-        </ul>
-        <a href="support.html"><img src="images/ico/006-heart-with-question-mark.png" alt="icone de ajuda"></a>
-    </nav>
-    Working
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="/images/ico/home.png" alt=""></a></li>
+                <li><a href="calendar.html"><img src="images/ico/003-calendar.png" alt="icone de calendario"></li></a>
+            </ul>
+            <a href="support.html"><img src="images/ico/006-heart-with-question-mark.png" alt="icone de ajuda"></a>
+        </nav>
+    </header>
+    <div class="phrase">
+        <p id="frase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quasi. Dolorum nostrum molestias fuga maxime alias voluptate accusamus dolor esse inventore repudiandae, accusantium neque labore ea reiciendis? Excepturi, deleniti eveniet!</p>
+        <input type="date" name="calendar" id="calendar">
+        <!-- <input type="button" id="sub-calendar" value="Enviar" onclick="calendario()"> -->
+        <nav>
+            <ul>
+                <li><img src="images/ico/005-flecha-do-amor-1.png" alt="anterior"></li>
+                <li id="meio"></li>
+                <li><img src="images/ico/004-flecha-do-amor.png" alt="próxima"></li>
+            </ul>
+        </nav>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="js/calendar.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+nav {
+    background-color: var(--azul-claro);
+}
+main {
+    background-color: var(--bege);
+}
+p {
+    font: 16px Arial, Helvetica, sans-serif ;
+    text-align: justify;
+}

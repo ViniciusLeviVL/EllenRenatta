@@ -1,0 +1,25 @@
+.photo {
+    width: 180px;
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: black solid 2px;
+}
+.phrase:nth-child(odd) {
+    background-color: var(--rosa-claro);
+}
+.phrase:nth-child(even) {
+    background-color: var(--azul-claro);
+}
+.phrase:nth-child(1) > .photo {
+    background-image: url("../images/auêis/main.jpg");
+}
+.phrase:nth-child(2) > .photo {
+    background-image: url("../images/auêis/vovo.jpeg");
+    background-position: center 60%;
+}
+.phrase:nth-child(3) > .photo {
+    background-image: url("../images/auêis/thumb.jpg");
+    background-position: center 15%;
+}

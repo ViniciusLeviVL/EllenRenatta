@@ -11,46 +11,22 @@
     --rosa-claro:#FFC8DD;
     --lilás:#CDB4DB;
     --rosa:#FFAFCC;
-    --azul-claro:#BDE0FE;
+    --azul-claro: #e9f4fe;
     --azul:#A2D2FF;
+    --bege: beige;
+    --box-shadow:rgba(117, 117, 105, 0.788);
     --Cute: "Cute", Arial, Helvetica, sans-serif;
 }
-.photo-phrase {
+.phrase {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    box-shadow:#865969b6 0 2px 30px;
-    padding: 35px 0 35px 0;
+    padding: 35px 0 0 0;
 }
-.photo-phrase:nth-child(odd) {
-    background-color: var(--rosa-claro);
-}
-.photo-phrase:nth-child(even) {
-    background-color: #bde0fe54;
-}
-.photo {
-    width: 180px;
-    height: 180px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    border: black solid 2px;
-}
-.photo-phrase > p {
+.phrase > p {
     text-align: center;
     font-family: var(--Cute);
     width: 75%;
-    margin-top: 20px;
-}
-.photo-phrase:nth-child(1) > .photo {
-    background-image: url("../images/auêis/main.jpg");
-}
-.photo-phrase:nth-child(2) > .photo {
-    background-image: url("../images/auêis/vovo.jpeg");
-    background-position: center 60%;
-}
-.photo-phrase:nth-child(3) > .photo {
-    background-image: url("../images/auêis/thumb.jpg");
-    background-position: center 15%;
+    margin: 35px 0 35px 0;
 }
