@@ -30,13 +30,17 @@ const data = {
     },
     // subtrai a data selecionada por dias marcantes
     untilDate: function (aa,mm,dd) {
-        let until = data.aaaa - aa + " ano(s) "
+        let until = data.aaaa - aa + " ano(s) atrás "
         if (mm != undefined) {
-            until += data.mm - mm + " mes(es) "
+            until = data.aaaa - aa + " ano(s) " + data.mm - mm + " mes(es) atrás "
         } 
         if (dd != undefined) {
-            until += data.dd - dd + " dia(s) "
+            until = data.aaaa - aa + " ano(s) " + data.mm - mm + " mes(es) " + data.dd - dd + " dia(s) atrás "
         }
+        if (until == "0 ano(s) atrás " || until == "0 ano(s) 0 mes(es) atrás " || until == "0 ano(s) 0 mes(es) 0 dia(s) atrás ") {
+            until = "Neste dia "
+        } 
+        console.log(until)
         return until
     },
     // avança ou retrocede um dia

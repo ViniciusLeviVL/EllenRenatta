@@ -25,10 +25,9 @@
         <div id="frase">
             <p>Você é incrível</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deserunt saepe officiis recusandae dolores at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sit sunt, fugiat rem voluptate consequuntur minima illo corrupti dolor vitae magnam, tempore doloremque totam. Amet impedit magni tempore facere quisquam?</p>
-            <p>Eu te amo MUITO ❤️</p>
         </div>
         <div>
-            <input type="date" name="calendar" id="calendar">
+            <input type="date" name="calendar" id="calendar" min="2021-08-15">
             <nav>
                 <ul>
                     <li><img src="images/ico/005-flecha-do-amor-1.png" alt="anterior"></li>
@@ -39,12 +38,11 @@
     </div>
 
     <script src="js/calendar.js"></script>
+    <script src="js/phrases.js"></script>
+    <script src="js/mudarTexto.js"></script>
     <script>
         document.querySelector("#frase > p:nth-child(1)").innerText = data.dateBR()
         document.querySelector("#frase > p:nth-child(2)").innerText = getPraise()
     </script>
-    <script src="js/phrases.js"></script>
-    <script src="js/mudarTexto.js"></script>
-
 </body>
 </html>

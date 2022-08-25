@@ -1,4 +1,6 @@
 const praises = [
+    "Eu te amo MUITO ❤️",
+    "Você é incrível ✨❤️",
     "All of me loves all of you. Love your curves and all your edges, all your perfect imperfections\n - Jhon Legend",
     "Diante da vastidão do tempo e da imensidão do universo, é um imenso prazer para mim dividir um planeta e uma época com você.\n- Carl Sagan\nSérie: Cosmos",
     "Nenhum espaço de tempo com você seria suficiente... comecemos com o para sempre.\n Filme: Crepúsculo: Amanhecer Parte 1",
