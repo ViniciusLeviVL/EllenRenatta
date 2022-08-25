@@ -1,13 +1,10 @@
 body {
-    background-color: var(--azul-claro);
-}
-.phrase {
     background-color: var(--rosa-claro);
-    width: 100%;
-    height: calc(100vh - 50px);
-    border-radius: 10px;
-    border: var(--rosa) solid 1.5px;
-    box-shadow: 0px 2px 4px var(--box-shadow);
+    background-image: url("https://m.media-amazon.com/images/I/316FSDek9sL._AC_SY450_.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
 }
 #calendar {
     height: 25px;
@@ -16,20 +13,53 @@ body {
     border: none;
     border-radius: 7px;
     box-shadow: 0px 0.3px 3px  var(--box-shadow);
-    background-color: var(--bege);
-    font: 14px Verdana, Helvetica, sans-serif;
+    font: 14px cursive, Verdana, Helvetica, sans-serif;
 }
-.phrase nav {
-    margin-bottom: 0;
-    border-radius:0 0 10px 10px;
-    border-top: var(--rosa) solid 1.5px;
+.phrase {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
 }
-.phrase nav ul {
+.phrase div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.phrase div:first-of-type {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+}
+.phrase div:first-of-type > p {
+    font-size: 1.7rem;
+}
+.phrase div:last-of-type {
+    margin-bottom: 30px;
+}
+.phrase div nav {
+    width: 80%;
+    box-shadow: 0px 1px 5px rgba(136, 136, 136, 0.274);
+    border-radius: 20px 20px;
+    overflow: hidden;
+    background: rgb(221,221,166);
+    background: radial-gradient(circle,rgba(245,245,220,1)  0%, rgba(221,221,166,1) 100%);
+}
+.phrase div nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     cursor: pointer;
 }
-#meio {
-    width: 1px;
-    background-color: var(--rosa);
-    height: 100%;
+.phrase div nav ul li {
+    width: 100%;
+}
+.phrase div nav ul li img {
+    display: block;
+    margin: auto;
 }

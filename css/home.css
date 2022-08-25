@@ -11,6 +11,7 @@
 }
 .phrase:nth-child(even) {
     background-color: var(--azul-claro);
+    box-shadow: inset 2px 0px 10px rgba(0, 0, 0, 0.37);
 }
 .phrase:nth-child(1) > .photo {
     background-image: url("../images/auêis/main.jpg");
@@ -22,4 +23,10 @@
 .phrase:nth-child(3) > .photo {
     background-image: url("../images/auêis/thumb.jpg");
     background-position: center 15%;
+}
+.phrase {
+    padding: 35px 0 0 0;
+}
+.phrase p {
+    margin: 35px 0 35px 0;
 }

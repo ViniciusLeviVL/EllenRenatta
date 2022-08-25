@@ -1,15 +1,29 @@
-nav {
-    background-color: var(--azul-claro);
+/*
+    Este arquivo CSS não está linkado com variáveis do style.css
+*/
+@font-face {
+    font-family: CuteTitle;
+    src: url("../fonts/I\ Found\ My\ Valentine\ -\ OTF.otf");
+}
+header nav {
+    background: rgb(233,244,254);
+    background: linear-gradient(145deg, rgba(233,244,254,1) 60%, rgba(255,255,255,1) 100%);
 }
 main {
-    background-color: var(--bege);
-    padding: 5vw;
+    background-color: beige;
+    padding: 7%;
 }
 main h2 {
-    font: 2rem var(--CuteTitle);
-    margin: 1rem;
+    font: 2rem "CuteTitle", Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.5rem 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
 }
 p {
     font: 1.2rem Cursive, Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
+}
+a {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
 }

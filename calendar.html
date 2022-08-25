@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendário ❤️</title>
+    <link rel="shortcut icon" href="images/ico/003-calendar.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/calendar.css">
-    
+    <script src="js/praises.js"></script>
 </head>
 <body>
     <header>
@@ -21,19 +22,29 @@
         </nav>
     </header>
     <div class="phrase">
-        <p id="frase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quasi. Dolorum nostrum molestias fuga maxime alias voluptate accusamus dolor esse inventore repudiandae, accusantium neque labore ea reiciendis? Excepturi, deleniti eveniet!</p>
-        <input type="date" name="calendar" id="calendar">
-        <nav>
-            <ul>
-                <li><img src="images/ico/005-flecha-do-amor-1.png" alt="anterior"></li>
-                <li id="meio"></li>
-                <li><img src="images/ico/004-flecha-do-amor.png" alt="próxima"></li>
-            </ul>
-        </nav>
+        <div id="frase">
+            <p>Você é incrível</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deserunt saepe officiis recusandae dolores at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sit sunt, fugiat rem voluptate consequuntur minima illo corrupti dolor vitae magnam, tempore doloremque totam. Amet impedit magni tempore facere quisquam?</p>
+            <p>Eu te amo MUITO ❤️</p>
+        </div>
+        <div>
+            <input type="date" name="calendar" id="calendar">
+            <nav>
+                <ul>
+                    <li><img src="images/ico/005-flecha-do-amor-1.png" alt="anterior"></li>
+                    <li><img src="images/ico/004-flecha-do-amor.png" alt="próxima"></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <footer>
 
-    </footer>
     <script src="js/calendar.js"></script>
+    <script>
+        document.querySelector("#frase > p:nth-child(1)").innerText = data.dateBR()
+        document.querySelector("#frase > p:nth-child(2)").innerText = getPraise()
+    </script>
+    <script src="js/phrases.js"></script>
+    <script src="js/mudarTexto.js"></script>
+
 </body>
 </html>

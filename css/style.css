@@ -2,10 +2,7 @@
     font-family: Cute;
     src: url("../fonts/Liebe\ finden\ -\ OTF.otf");
 }
-@font-face {
-    font-family: CuteTitle;
-    src: url("../fonts/I\ Found\ My\ Valentine\ -\ OTF.otf");
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,18 +17,17 @@
     --bege: beige;
     --box-shadow:rgba(117, 117, 105, 0.788);
     --Cute: "Cute", Arial, Helvetica, sans-serif;
-    --CuteTitle: "CuteTitle", Arial, Helvetica, sans-serif;
 }
 .phrase {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 35px 0 0 0;
 }
-.phrase > p {
+.phrase p {
     text-align: center;
     font: 1.2rem var(--Cute);
     width: 75%;
-    margin: 35px 0 35px 0;
+    margin: 15px 0 15px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.315);
 }

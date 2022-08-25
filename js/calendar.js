@@ -2,91 +2,80 @@ const c = document.getElementById("calendar")
 // declaração das constantes referentes as datas
 const date = new Date
 const data = {
-    dd: date.getDate(),
-    mm: date.getMonth() + 1,
-    aaaa: date.getFullYear(),
+    dd: String(date.getDate()),
+    mm: String(date.getMonth() + 1),
+    aaaa: String(date.getFullYear()),
+    // checa se a data tá no formato ideal (length == 2)
+    checkLenght: function (info) {
+        if (String(info).length == 1) {
+            info = "0"+info
+        }
+        return info
+    },
     // retorna a data atual no mesmo formato do input calendar
     date: function () {
-        let mms = String(this.mm).length
-        if (mms == 1) {
-            this.mm = "0"+this.mm
-        }
-        let dds = String(this.dd).length
-        if (dds == 1) {
-            this.dd = "0"+this.dd
-        }
-        let data = this.aaaa + "-" + this.mm + "-" + this.dd
-        return data
+        this.dd = this.checkLenght(this.dd)
+        this.mm = this.checkLenght(this.mm)
+        return this.aaaa + "-" + this.mm + "-" + this.dd
     },
-    // avança um dia
-    next: function(nextDay,daysFull,monthsFull) {
-        if (nextDay == true) {
+    // retorna a data no formato brasileiro
+    dateBR: function () {
+        return this.dd + "-" + this.mm + "-" + this.aaaa
+    },
+    // muda o valor da data de acordo com o valor escrito no input calendar
+    calendarChangeDate: function () {
+        data.aaaa = c.value.substring(0,4)
+        data.mm = c.value.substring(5,7)
+        data.dd = c.value.substring(8,10)
+    },
+    // subtrai a data selecionada por dias marcantes
+    untilDate: function (aa,mm,dd) {
+        let until = data.aaaa - aa + " ano(s) "
+        if (mm != undefined) {
+            until += data.mm - mm + " mes(es) "
+        } 
+        if (dd != undefined) {
+            until += data.dd - dd + " dia(s) "
+        }
+        return until
+    },
+    // avança ou retrocede um dia
+    changeDateBtn: function(btn) {
+        if (btn == "next") {
             let ddn = Number(this.dd)
             ddn += 1
             this.dd = String(ddn)
             if (ddn > 31) {
-                c.value = this.next(false,true)
+                let mmn = Number(this.mm)
+                mmn += 1
+                this.mm = String(mmn)
+                this.dd = "01"
+                if (mmn > 12) {
+                    let aaaan = Number(this.aaaa)
+                    aaaan += 1
+                    this.aaaa = String(aaaan)
+                    this.mm = "01"
+                }
             }
         }
-        if (daysFull == true) {
-            let mmn = Number(this.mm)
-            mmn += 1
-            this.mm = String(mmn)
-            this.dd = "01"
-            if (mmn > 12) {
-                c.value = this.next(false,false,true)
-            }
-        }
-        if (monthsFull == true) {
-            let aaaan = Number(this.aaaa)
-            aaaan += 1
-            this.aaaa = String(aaaan)
-            this.mm = "01"
-        } 
-        return this.date()
-    },
-    // retrocede um dia
-    prev: function(nextDay,daysFull,monthsFull) {
-        if (nextDay == true) {
+        if (btn == "prev") {
             let ddn = Number(this.dd)
             ddn -= 1
             this.dd = String(ddn)
             if (ddn < 1) {
-                c.value = this.prev(false,true)
+                let mmn = Number(this.mm)
+                mmn -= 1
+                this.mm = String(mmn)
+                this.dd = "31"
+                if (mmn < 1) {
+                    let aaaan = Number(this.aaaa)
+                    aaaan -= 1
+                    this.aaaa = String(aaaan)
+                    this.mm = "12"
+                }
             }
         }
-        if (daysFull == true) {
-            let mmn = Number(this.mm)
-            mmn -= 1
-            this.mm = String(mmn)
-            this.dd = "31"
-            if (mmn < 1) {
-                c.value = this.prev(false,false,true)
-            }
-        }
-        if (monthsFull == true) {
-            let aaaan = Number(this.aaaa)
-            aaaan -= 1
-            this.aaaa = String(aaaan)
-            this.mm = "12"
-        } 
         return this.date()
-    },
+    }
 }
 c.value = data.date()
-document.querySelector(".phrase nav ul li:nth-child(1)").addEventListener("click", function () {
-    c.value = data.prev(true)
-})
-document.querySelector(".phrase nav ul li:nth-child(3)").addEventListener("click", function () {
-    c.value = data.next(true)
-})
-
-/*
-function replacehifen(valor) {
-    return valor.replace(/-/g,"")
-}
-*/
-const phrases = {
-    20220823: "olá",
-}
-const frase = document.getElementById("frase")
