@@ -29,19 +29,18 @@ const data = {
         data.dd = c.value.substring(8,10)
     },
     // subtrai a data selecionada por dias marcantes
-    untilDate: function (aa,mm,dd) {
-        let until = data.aaaa - aa + " ano(s) atrás "
+    sinceDate: function (aa,mm,dd) {
+        let since = data.aaaa - aa + " ano(s) atrás "
         if (mm != undefined) {
-            until = data.aaaa - aa + " ano(s) " + data.mm - mm + " mes(es) atrás "
+            since = data.aaaa - aa + " ano(s) " + data.mm - mm + " mes(es) atrás "
         } 
         if (dd != undefined) {
-            until = data.aaaa - aa + " ano(s) " + data.mm - mm + " mes(es) " + data.dd - dd + " dia(s) atrás "
+            since = data.aaaa - aa + " ano(s) " + data.mm - mm + " mes(es) " + data.dd - dd + " dia(s) atrás "
         }
-        if (until == "0 ano(s) atrás " || until == "0 ano(s) 0 mes(es) atrás " || until == "0 ano(s) 0 mes(es) 0 dia(s) atrás ") {
-            until = "Neste dia "
+        if (since == "0 ano(s) atrás " || since == "0 ano(s) 0 mes(es) atrás " || since == "0 ano(s) 0 mes(es) 0 dia(s) atrás ") {
+            since = "Neste dia "
         } 
-        console.log(until)
-        return until
+        return since
     },
     // avança ou retrocede um dia
     changeDateBtn: function(btn) {

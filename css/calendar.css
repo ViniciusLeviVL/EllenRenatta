@@ -63,3 +63,10 @@ margin-bottom: 30px;
     display: block;
     margin: auto;
 }
+.added {
+    border-radius: 10px;
+    display:block;
+    margin: 10px auto 0 auto;
+    height: 300px;
+    box-shadow: 4px 4px 10px var(--box-shadow);
+}

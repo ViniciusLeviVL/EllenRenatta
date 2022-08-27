@@ -19,7 +19,7 @@ main h2 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
 }
 p {
-    font: 1.2rem Cursive, Verdana, Geneva, Tahoma, sans-serif;
+    font: 1.2rem Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
 }
 a {
