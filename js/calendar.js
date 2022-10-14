@@ -1,4 +1,4 @@
-const c = document.getElementById("calendar")
+
 // declaração das constantes referentes as datas
 const date = new Date
 const data = {
@@ -22,12 +22,7 @@ const data = {
     dateBR: function () {
         return this.dd + "-" + this.mm + "-" + this.aaaa
     },
-    // muda o valor da data de acordo com o valor escrito no input calendar
-    calendarChangeDate: function () {
-        data.aaaa = c.value.substring(0,4)
-        data.mm = c.value.substring(5,7)
-        data.dd = c.value.substring(8,10)
-    },
+
     // subtrai a data selecionada por dias marcantes
     sinceDate: function (aa,mm,dd) {
         let since = data.aaaa - aa + " ano(s) atrás "
@@ -81,4 +76,24 @@ const data = {
         return this.date()
     }
 }
-c.value = data.date()
+
+/* function abc() {
+    let date;
+    let day = 0
+    let month = 1
+    let i = 1
+    while (i < 384) {
+        day += 1
+        if (day > 31) {
+            day = 0
+            month += 1
+        }
+
+        date += '\n$' + String(data.checkLenght(month)) + String(data.checkLenght(day))+ ':' + praises[i]
+        i++
+    }
+    return date
+
+}
+
+console.log(abc()) */

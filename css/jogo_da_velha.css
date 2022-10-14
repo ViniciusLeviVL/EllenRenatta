@@ -6,7 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: #e9f4fe;
-    color: #05223d;
+    color: var(--azul-escuro);
 }
 
 #board {
@@ -18,7 +18,7 @@ body {
     display: inline-block;
     height: 100px;
     width: 100px;
-    background-color: #FFAFCC;
+    background-color: var(--rosa);
     border-radius: 5px;
     box-shadow: inset rgba(0, 0, 0, 0.336) 2px 2px 5px;
 }

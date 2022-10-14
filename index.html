@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Always ❤️</title>
     <link rel="shortcut icon" href="/images/ico/home.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/home.css">
-    <script src="js/praises.js"></script>
+    <script src="js/txt.js"></script>
 </head>
 <body>
     <header>
@@ -24,20 +25,21 @@
     <main>
         <div class="phrase">
             <div class="photo"></div>
-            <p>"Nenhum espaço de tempo com você seria suficiente... comecemos com o para sempre."</p>
+            <p></p>
         </div>
         <div class="phrase">
             <div class="photo"></div>
-            <p>"Diante da vastidão do tempo e da imensidão do universo, é um imenso prazer para mim dividir um planeta e uma época com você."</p>
+            <p></p>
         </div>
         <div class="phrase">
             <div class="photo"></div>
-            <p>"All of me
-                loves all of you.
-                Love your curves and all your edges,
-                all your perfect imperfections"</p>
+            <p></p>
         </div>
     </main>
-    <script src="js/home.js"></script>
+    <script>
+        document.querySelectorAll(".phrase > p").forEach(p => {
+            p.innerText = txt.getRandomTxt(txt.phraseOfMusic)
+        })
+    </script>
 </body>
 </html>

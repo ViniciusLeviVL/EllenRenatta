@@ -1,4 +1,29 @@
-const frase = document.querySelector(".phrase div:first-of-type")
+const frase = document.querySelector("#frase")
+const c = document.getElementById("calendar")
+
+c.value = data.date()
+
+document.querySelector(".phrase nav ul li:nth-child(1)").addEventListener("click", function () {
+    c.value = data.changeDateBtn("prev")
+    frase.innerHTML = phrases.datas()
+})
+document.querySelector(".phrase nav ul li:last-of-type").addEventListener("click", function () {
+    c.value = data.changeDateBtn("next")
+    frase.innerHTML = phrases.datas()
+})
+c.addEventListener("focusout", function () {
+    clearInterval()
+    calendarChangeDate()
+    frase.innerHTML = phrases.datas()
+}) 
+
+// muda o valor da data de acordo com o valor escrito no input calendar
+function calendarChangeDate() {
+    data.aaaa = c.value.substring(0, 4)
+    data.mm = c.value.substring(5, 7)
+    data.dd = c.value.substring(8, 10)
+}
+
 const phrases = {
     datas: function () {
         switch (data.mm+data.dd) {
@@ -70,7 +95,7 @@ const phrases = {
             case "1221":
                 return data.sinceDate(2022) + "a gente foi assistir homem-aranha, depois de um bom tempo sem se ver 🙂❤️."
         default:
-            return getPraise()
+            return txt.getRandomTxt(txt.praises)
         }
     }
 }

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Cute;
+    src: url("../fonts/Liebe\ finden\ -\ OTF.otf");
+}
+
+:root {
+    --rosa-claro:#FFC8DD;
+    --lilás:#CDB4DB;
+    --rosa:#FFAFCC;
+    --azul-claro: #e9f4fe;
+    --azul-ultra: #05c3ff;
+    --azul:#A2D2FF;
+    --azul-escuro: #101c2c;
+    --bege: beige;
+    --global-box-shadow: rgba(0, 0, 0, 0.404);
+    --Cute: "Cute", Arial, Helvetica, sans-serif;
+}
+
+    /* rgba(117, 117, 105, 0.788) */

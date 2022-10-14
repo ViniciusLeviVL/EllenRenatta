@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário ❤️</title>
     <link rel="shortcut icon" href="images/ico/003-calendar.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/calendar.css">
-    <script src="js/praises.js"></script>
+    <script src="js/txt.js"></script>
 </head>
 <body>
     <header>
@@ -22,10 +23,7 @@
         </nav>
     </header>
     <div class="phrase">
-        <div id="frase">
-            <p>Você é incrível</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deserunt saepe officiis recusandae dolores at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sit sunt, fugiat rem voluptate consequuntur minima illo corrupti dolor vitae magnam, tempore doloremque totam. Amet impedit magni tempore facere quisquam?</p>
-        </div>
+        <p id="frase"></p>
         <div>
             <input type="date" name="calendar" id="calendar" min="2021-08-15">
             <nav>
@@ -37,11 +35,9 @@
         </div>
     </div> 
     <script src="js/calendar.js"></script>
-    <script src="js/phrases.js"></script>
-    <script src="js/mudarTexto.js"></script>
+    <script src="js/calendarInterface.js"></script>
     <script>
-        document.querySelector("#frase > p:nth-child(1)").innerText = data.dateBR()
-        document.querySelector("#frase > p:nth-child(2)").innerText = getPraise()
+        document.querySelector("#frase").innerText = txt.getRandomTxt(txt.praises)
     </script>
 </body>
 </html>
