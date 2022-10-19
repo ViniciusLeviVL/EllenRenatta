@@ -1,27 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root {
-    --azul-escuro: #101c2c;
-    --azul-claro: #05c3ff;
-
-}
 body {
-    font: 2rem 'Righteous', sans-serif;
+    background-color: var(--monochromatic1);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
 }
 #gameboard {
-    max-width: 700px;
+    max-width: 400px;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
     gap: 20px;
+    margin: auto;
 }
 #gameover {
     height: 100vh;
@@ -71,11 +65,15 @@ body {
     backface-visibility: hidden;
 }
 .card_back {
-    background-color: var(--azul-claro);
+    background-color: var(--azul-ultra);
 }
 .card_front {
-    background-color: var(--azul-escuro);
+    background-color: var(--monochromatic1);
     transform: rotateY(180deg);
+}
+.card img {
+    width: 93%;
+    height: 93%;
 }
 .flip {
     transform: rotateY(180deg);

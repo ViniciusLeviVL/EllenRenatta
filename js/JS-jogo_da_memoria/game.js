@@ -1,15 +1,14 @@
 let game = {
     icons: [
-        'bootstrap',
-        'css',
-        'electron',
-        'firebase',
-        'html',
-        'javascript',
-        'jquery',
-        'mongo',
-        'node',
-        'react'
+        'gryffindor',
+        'hat',
+        'hogwarts',
+        'hufflepuff',
+        'icon',
+        'pomo',
+        'ravenclaw',
+        'slytherin',
+        'triangle'
     ],
 
     cards: [],
@@ -113,7 +112,3 @@ let game = {
 }
 
 game.startGame()
-
-setInterval(() => {
-    console.log(game.lockMode)
-}, 1000)

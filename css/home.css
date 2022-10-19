@@ -7,11 +7,11 @@
     border: black solid 2px;
 }
 .phrase:nth-child(odd) {
-    background-color: var(--rosa-claro);
+    background-color: var(--azul);
 }
 .phrase:nth-child(even) {
-    background-color: var(--azul-claro);
-    box-shadow: inset 2px 0px 10px var(--global-box-shadow);
+    background-color: var(--azul-bebe);
+    box-shadow: inset 2px 0px 10px var(--azul);
 }
 .phrase:nth-child(1) > .photo {
     background-image: url("../images/auêis/main.jpg");

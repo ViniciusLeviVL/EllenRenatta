@@ -4,6 +4,7 @@ const FRONT = 'card_front'
 const BACK = 'card_back'
 const CARD = 'card'
 const FLIP = 'flip'
+const backBackgroundIcon = 'glasses'
 
 function doGameboard() {
 game.cards.forEach(card => {
@@ -22,18 +23,18 @@ function createCardFace(face, card, div) {
     let e = document.createElement('div')
     if (face === FRONT) {
         e.classList.add(FRONT)
-        e.appendChild(createCardFrontImage(card.icon))
+        e.appendChild(createCardImage(card.icon))
     } else {
         e.classList.add(BACK)
-        e.innerHTML = '&lt;/&gt;'
+        e.appendChild(createCardImage(backBackgroundIcon))
     }
     div.appendChild(e)
 }
 
-function createCardFrontImage(icone) {
-    let icon = document.createElement('img')
-    icon.src = './images/' + icone + '.png'
-    return icon
+function createCardImage(name) {
+    let img = document.createElement('img')
+    img.src = 'images/jogo_da_memoria/' + name + '.png'
+    return img
 }
 
 function flipCard() {

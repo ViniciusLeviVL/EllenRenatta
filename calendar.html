@@ -11,16 +11,11 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/calendar.css">
     <script src="js/txt.js"></script>
+    <script src="js/nav.js"></script>
 </head>
-<body>
+<body onload="nav()">
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html"><img src="/images/ico/home.png" alt=""></a></li>
-                <li><a href="calendar.html"><img src="images/ico/003-calendar.png" alt="icone de calendario"></li></a>
-            </ul>
-            <a href="support.html"><img src="images/ico/006-heart-with-question-mark.png" alt="icone de ajuda"></a>
-        </nav>
+        <nav id="nav"></nav>
     </header>
     <div class="phrase">
         <p id="frase"></p>
@@ -28,16 +23,16 @@
             <input type="date" name="calendar" id="calendar" min="2021-08-15">
             <nav>
                 <ul>
-                    <li><img src="images/ico/005-flecha-do-amor-1.png" alt="anterior"></li>
-                    <li><img src="images/ico/004-flecha-do-amor.png" alt="próxima"></li>
+                    <li><img src="images/ico/prev.png" style="width: 32px; height: 32px;" alt="anterior"></li>
+                    <li><img src="images/ico/next.png" style="width: 32px; height: 32px;" alt="próxima"></li>
                 </ul>
             </nav>
         </div>
     </div> 
-    <script src="js/calendar.js"></script>
-    <script src="js/calendarInterface.js"></script>
+    <script src="js/JS-calendar/calendar.js"></script>
+    <script src="js/JS-calendar/calendarInterface.js"></script>
     <script>
-        document.querySelector("#frase").innerText = txt.getRandomTxt(txt.praises)
+        document.querySelector("#frase").innerText = txt.$365[data.$365i() - 1]
     </script>
 </body>
 </html>

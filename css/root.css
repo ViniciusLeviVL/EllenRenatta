@@ -4,16 +4,28 @@
 }
 
 :root {
-    --rosa-claro:#FFC8DD;
     --lilás:#CDB4DB;
     --rosa:#FFAFCC;
-    --azul-claro: #e9f4fe;
+    --rosa-claro:#FFC8DD;
+    --vermelho: #FB373C;
+    --azul-escuro: #101c2c;
     --azul-ultra: #05c3ff;
     --azul:#A2D2FF;
-    --azul-escuro: #101c2c;
-    --bege: beige;
+    --azul-claro: #a7ccf0;
+    --azul-bebe:#E7FAFE;
     --global-box-shadow: rgba(0, 0, 0, 0.404);
     --Cute: "Cute", Arial, Helvetica, sans-serif;
+
+    /* Monochromatic */
+    --monochromatic1: #f8f9fa;
+    --monochromatic2: #e9ecef;
+    --monochromatic3: #dee2e6;
+    --monochromatic4: #ced4da;
+    --monochromatic5: #adb5bd;
+    --monochromatic6: #6c757d;
+    --monochromatic7: #495057;
+    --monochromatic8: #343a40;
+    --monochromatic9: #212529;
 }
 
     /* rgba(117, 117, 105, 0.788) */
