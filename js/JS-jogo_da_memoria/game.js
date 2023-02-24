@@ -15,11 +15,17 @@ let game = {
     lockMode: false,
     card1: null,
     card2: null,
+    playerTurn: 0,
+    score: [0,0],
+    winner: null,
 
     startGame: function () {
         this.cards = []
         this.createCards()
         this.clearCards()
+        this.playerTurn = 0
+        this.score = [0,0]
+        this.winner = null
     },
 
     // cria as cartas embaralhadas
@@ -47,18 +53,6 @@ let game = {
     createId: function (icon) {
         return icon + Math.floor(Math.random() * 1000)
     },
-
-    /*       c/ 'while'
-        shuffleCards: function () {
-            let i = this.cards.length
-            let r;
-            while (i > 0) {
-                r = Math.floor(Math.random() * i)
-                i--;
-                [this.cards[i], this.cards[r]] = [this.cards[r], this.cards[i]]
-            }
-        },
-     */
 
     shuffleCards: function () {
         let r;
@@ -88,7 +82,10 @@ let game = {
     },
 
     checkMatch: function () {
-        return this.card1.icon === this.card2.icon
+        if (this.card1.icon === this.card2.icon) {
+            this.score[this.playerTurn] += 1 
+            return true
+        }
     },
 
     clearCards: function () {
@@ -102,9 +99,14 @@ let game = {
         this.card2.flipped = false
     },
 
+    changeTurn: function () {
+        this.playerTurn = this.playerTurn == 0 ? 1 : 0  
+    },
+
     checkWin: function () {
         let win = this.cards.filter(card=>card.flipped===false)
         if (win.length == 0) {
+            this.winner = this.score[0] > this.score[1] ? "p1" : "p2" 
             return true
         }
         return false

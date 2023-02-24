@@ -39,21 +39,27 @@ function createCardImage(name) {
 
 function flipCard() {
     if (game.setCard(this.id)) {
+        this.firstChild.classList.add("p" + game.playerTurn)
         this.classList.add(FLIP)
-        if (game.card1 != null && game.card2 != null) {
+        if (game.card1 != null && game.card2 != null) { 
             if (game.checkMatch()) {
                 game.clearCards()
                 if (game.checkWin()) {
                     gameover.style.display = 'flex'
+                    document.getElementById("win_p").innerHTML = game.winner == "p1" ? "AZUL" : "ROSA"
                 }
             } else {
                 setTimeout(()=> {
                     game.unflipCards()
                     document.getElementById(game.card1.id).classList.remove(FLIP)
                     document.getElementById(game.card2.id).classList.remove(FLIP)
-                    game.clearCards()
+                    setTimeout(() => {
+                        document.getElementById(game.card1.id).firstChild.classList.remove("p" + game.playerTurn)
+                        document.getElementById(game.card2.id).firstChild.classList.remove("p" + game.playerTurn)
+                        game.changeTurn()
+                        game.clearCards()
+                    }, 200)
                 }, 500)
-                
             }
         }
     }
