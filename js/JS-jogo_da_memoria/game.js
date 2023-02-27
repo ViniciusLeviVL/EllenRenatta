@@ -86,6 +86,7 @@ let game = {
             this.score[this.playerTurn] += 1 
             return true
         }
+        this.changeTurn()
     },
 
     clearCards: function () {

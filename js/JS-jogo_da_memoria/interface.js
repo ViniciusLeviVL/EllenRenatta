@@ -8,8 +8,10 @@ const PLAYER_TURN_CARD_FRONT_COLOR = 'card-front-color'
 const FLIP = 'flip'
 const backBackgroundIcon = 'glasses'
 
+var unflippedCards = []
+
 function doGameboard() {
-game.cards.forEach(card => {
+    game.cards.forEach(card => {
         let cardDiv = document.createElement('div')
         cardDiv.id = card.id
         cardDiv.classList.add(CARD)
@@ -19,6 +21,7 @@ game.cards.forEach(card => {
         cardDiv.addEventListener('click',flipCard)
         gameboard.appendChild(cardDiv)
     })
+    for (let i = 0; i < gameboard.children.length; i++) { unflippedCards.push(gameboard.children[i]) }
 }
 
 function createCardFace(face, card, div) {
@@ -39,19 +42,13 @@ function createCardImage(name) {
     return img
 }
 
-function changeCardsColors() {
-    let cards = document.getElementsByClassName("card")
-    for (let i = 0; i < cards.length; i++) {    
-        cards[i].firstChild.classList.toggle(PLAYER_TURN_CARD_FRONT_COLOR)
-        cards[i].lastChild.classList.toggle(PLAYER_TURN_CARD_BACK_COLOR)
-    }
-}
-
 function flipCard() {
     if (game.setCard(this.id)) {
         this.classList.add(FLIP)
         if (game.card1 != null && game.card2 != null) { 
             if (game.checkMatch()) {
+                unflippedCards.splice(unflippedCards.indexOf(document.getElementById(game.card1.id)), 1)
+                unflippedCards.splice(unflippedCards.indexOf(document.getElementById(game.card2.id)), 1)
                 game.clearCards()
                 if (game.checkWin()) {
                     gameover.style.display = 'flex'
@@ -65,9 +62,11 @@ function flipCard() {
                     game.clearCards()
                 }, 500)
                 setTimeout(()=>{
-                    changeCardsColors()
+                    unflippedCards.forEach(card => {
+                        card.getElementsByClassName(FRONT)[0].classList.toggle(PLAYER_TURN_CARD_FRONT_COLOR)
+                        card.getElementsByClassName(BACK)[0].classList.toggle(PLAYER_TURN_CARD_BACK_COLOR)
+                    })  
                 },900)
-
             }
         }
     }
