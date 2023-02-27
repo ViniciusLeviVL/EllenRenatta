@@ -3,6 +3,8 @@ const gameover = document.getElementById('gameover')
 const FRONT = 'card_front'
 const BACK = 'card_back'
 const CARD = 'card'
+const PLAYER_TURN_CARD_BACK_COLOR = 'card-back-color'
+const PLAYER_TURN_CARD_FRONT_COLOR = 'card-front-color'
 const FLIP = 'flip'
 const backBackgroundIcon = 'glasses'
 
@@ -37,9 +39,16 @@ function createCardImage(name) {
     return img
 }
 
+function changeCardsColors() {
+    let cards = document.getElementsByClassName("card")
+    for (let i = 0; i < cards.length; i++) {    
+        cards[i].firstChild.classList.toggle(PLAYER_TURN_CARD_FRONT_COLOR)
+        cards[i].lastChild.classList.toggle(PLAYER_TURN_CARD_BACK_COLOR)
+    }
+}
+
 function flipCard() {
     if (game.setCard(this.id)) {
-        this.firstChild.classList.add("p" + game.playerTurn)
         this.classList.add(FLIP)
         if (game.card1 != null && game.card2 != null) { 
             if (game.checkMatch()) {
@@ -53,13 +62,12 @@ function flipCard() {
                     game.unflipCards()
                     document.getElementById(game.card1.id).classList.remove(FLIP)
                     document.getElementById(game.card2.id).classList.remove(FLIP)
-                    setTimeout(() => {
-                        document.getElementById(game.card1.id).firstChild.classList.remove("p" + game.playerTurn)
-                        document.getElementById(game.card2.id).firstChild.classList.remove("p" + game.playerTurn)
-                        game.changeTurn()
-                        game.clearCards()
-                    }, 200)
+                    game.clearCards()
                 }, 500)
+                setTimeout(()=>{
+                    changeCardsColors()
+                },900)
+
             }
         }
     }

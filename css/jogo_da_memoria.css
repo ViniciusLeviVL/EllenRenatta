@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - var(--nav-heigth));
 }
 #gameboard {
     max-width: 400px;
@@ -18,12 +18,12 @@ body {
     margin: auto;
 }
 #gameover {
-    height: 100vh;
+    height: calc(100vh - var(--nav-heigth));
     width: 100vw;
     position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.822);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -68,7 +68,7 @@ body {
     background-color: var(--azul-ultra);
 }
 .card_front {
-    background-color: var(--monochromatic1);
+    background-color: var(--azul-claro);
     transform: rotateY(180deg);
 }
 .card img {
@@ -78,9 +78,9 @@ body {
 .flip {
     transform: rotateY(180deg);
 }
-.p0 {
-    background-color: var(--azul-claro);
-}
-.p1 {
+.card-front-color {
     background-color: var(--rosa-claro);
+}
+.card-back-color {
+    background-color: var(--rosa-ultra);
 }
