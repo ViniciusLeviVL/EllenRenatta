@@ -12,8 +12,8 @@ const data = {
     ddn: date.getDate(),
     mmn: date.getMonth() + 1,
     aaaan: date.getFullYear(),
-    dds: String(checkLength(date.getDate())),
-    mms: String(checkLength(date.getMonth() + 1)),
+    dds: String(this.checkLength(date.getDate())),
+    mms: String(this.checkLength(date.getMonth() + 1)),
     aaaas: String(date.getFullYear()),
     // checa se a data tá no formato ideal (length == 2)
     checkLength: function (info) {
@@ -109,28 +109,3 @@ const data = {
 }
 
 console.log(data.$365i())
-
-
-
-
-
-/* function abc() {
-    let date;
-    let day = 0
-    let month = 1
-    let i = 1
-    while (i < 384) {
-        day += 1
-        if (day > 31) {
-            day = 0
-            month += 1
-        }
-
-        date += '\n$' + String(data.checkLength(month)) + String(data.checkLength(day))+ ':' + praises[i]
-        i++
-    }
-    return date
-
-}
-
-console.log(abc()) */

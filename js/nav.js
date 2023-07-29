@@ -18,7 +18,9 @@ function nav() {
                 <div class="noneDisplay" style="display: none;">
                     <a href="jogo_da_velha.html">Jogo da velha</a>
                     <br>
-                    <a href="jogo_da_memoria.html">Jogo da memória</a>
+                    <a href="jogo_da_memoria-6x3.html">Jogo da memória 1</a>
+                    <br>
+                    <a href="jogo_da_memoria-7x4.html">Jogo da memória 2</a>
                 </div>
             </li>
         </ul>

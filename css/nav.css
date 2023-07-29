@@ -48,7 +48,7 @@ header {
 }
 .noneDisplay {
     position: absolute;
-    width: 150px;
+    width: 160px;
     padding: 5px;
     background-color: var(--global-box-shadow);
     transform: translateX(-15%);

@@ -8,6 +8,8 @@ const PLAYER_TURN_CARD_FRONT_COLOR = 'card-front-color'
 const FLIP = 'flip'
 const backBackgroundIcon = 'glasses'
 
+game.startGame(icons)
+
 var unflippedCards = []
 
 function doGameboard() {

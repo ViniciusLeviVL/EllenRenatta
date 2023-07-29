@@ -1,15 +1,4 @@
 let game = {
-    icons: [
-        'gryffindor',
-        'hat',
-        'hogwarts',
-        'hufflepuff',
-        'icon',
-        'pomo',
-        'ravenclaw',
-        'slytherin',
-        'triangle'
-    ],
 
     cards: [],
     lockMode: false,
@@ -19,9 +8,9 @@ let game = {
     score: [0,0],
     winner: null,
 
-    startGame: function () {
+    startGame: function (icons) {
         this.cards = []
-        this.createCards()
+        this.createCards(icons)
         this.clearCards()
         this.playerTurn = 0
         this.score = [0,0]
@@ -30,8 +19,8 @@ let game = {
 
     // cria as cartas embaralhadas
 
-    createCards: function () {
-        for (icon of this.icons) {
+    createCards: function (icons) {
+        for (icon of icons) {
             this.cards.push(this.createCard(icon))
         }
         this.cards = this.cards.flatMap(pair => pair)
@@ -113,5 +102,3 @@ let game = {
         return false
     },
 }
-
-game.startGame()
