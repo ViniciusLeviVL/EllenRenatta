@@ -21,6 +21,8 @@ function nav() {
                     <a href="jogo_da_memoria-6x3.html">Jogo da memória 1</a>
                     <br>
                     <a href="jogo_da_memoria-7x4.html">Jogo da memória 2</a>
+                    <br>
+                    <a href="https://term.ooo/" target="_blank">Termo</a>
                 </div>
             </li>
         </ul>
