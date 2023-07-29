@@ -3,7 +3,7 @@ function nav() {
         `<ul>
             <li>
                 <a href="index.html">
-                    <img src="/images/ico/home.png" id="home" alt="início">
+                    <img src="images/ico/home.png" id="home" alt="início">
                 </a>
             </li>
             <li>
