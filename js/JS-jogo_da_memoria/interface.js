@@ -75,7 +75,7 @@ function flipCard() {
 }
 
 function playAgain() {
-    game.startGame()
+    game.startGame(icons)
     gameover.style.display = 'none'
     gameboard.innerHTML = ''
     doGameboard()
