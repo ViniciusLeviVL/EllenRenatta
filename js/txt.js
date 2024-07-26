@@ -208,7 +208,7 @@ const txt = {
         'Eu amo o som da sua risada',
         'Eu amo o NOSSO dia 27 🤩❤️', // 27 pra dar uma de doido 😈🤪🤪🤪
         'Eu amo como esse é o primeiro dia de mais um ano com você 🥰',
-        'Esse fica pra amanhã que agora é hora de fazer Sophia 😈', // Eu amo como você é MINHA NOIVA 😍❤️ 
+        'Eu amo seu cabelo',//'A curiosidade matou a Gattinha', // 'Eu amo como você é MINHA NOIVA 😍❤️',
         'Eu amo os seus defeitos',
         'Eu amo seu pé',
         'Eu amo todas as partes do seu corpo',
