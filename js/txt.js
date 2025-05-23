@@ -143,7 +143,7 @@ const txt = {
         'Eu amo quando você me acorda com uma mensagem de bom dia',
         'Eu amo como você me dá um motivo para eu te amar mais todos os dias',
         'Eu amo como sempre conseguimos enfrentar tudo para ficar juntos',
-        'Eu amo como você me assusta',
+        'Sua noiva ama quando ela consegue fazer uma surpresa para você e como vamos dormir juntinhos em uma casa na árvore',
         'Eu amo quando você se assusta',
         'Eu amo como nos assustamos',
         'Eu amo a sua mãe, sério!',
